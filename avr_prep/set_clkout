@@ -1,0 +1,11 @@
+#!/bin/bash
+# Assumeds that PORT points to an AVR ISP programmer running at 19200 baud
+
+AVRDUDE=avrdude
+PORT=/dev/tty.usbserial-A700dXZS
+PROGRAMMER=avrisp
+PART=m328p
+BAUD=19200
+
+echo "Executing avrdude to burn lfuse=0xbf to enable ckout"
+${AVRDUDE} -v  -p ${PART} -P ${PORT} -c ${PROGRAMMER} -b ${BAUD} -U lfuse:w:0xbf:m

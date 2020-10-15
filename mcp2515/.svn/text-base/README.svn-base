@@ -1,0 +1,38 @@
+mcp2515_test <koniho@gmail.com>
+
+A simple loopback test for the mcp2515 using an AVR. The mcp2515 portion of
+the code is written by Martin Thomas <eversmith@heizung-thomas.de> whose
+copyright is included in the relevant files. A number of small modifications
+have been made to support the atmega238p using the connections listed below.
+
+Connections (taken from The Heart Machine board schematic):
+
+MCP-PIN     SIGNAL      CONNECTED-TO
+
+1           TXCAN       -
+2           RXCAN       -
+3           CLKOUT      -
+4           ~TX0RTS     -
+5           ~TX1RTS     -
+6           ~TX2RTS     -
+7           OSC2        GND
+8           OSC1        PORTB0 (CKOUT)
+9           V_SS        GND
+10          ~RX1BF      -
+11          ~RX0BF      -
+12          ~INT        PORTD2 (CANINT)
+13          SCK         PORTB5 (SCLK)
+14          SI          PORTB3 (MOSI)
+15          SO          PORTB4 (MISO)
+16          ~CS         PORTD6 (CSCAN)
+17          ~RESET      V_cc
+18          V_DD        V_cc
+
+The program runs in a continuous loop that will generate CAN messages of random
+identifier, a random payload length, and random data for the payload. Transmit
+and Receive results are output via rs232 at 57600 baud.
+
+NOTE: the ~INT signal is not yet respected on the AVR.
+
+TODO: Add GPIO functionality to twiddle LEDS on TX, RX.
+

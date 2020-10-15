@@ -1,0 +1,401 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/heartmachine/!svn/ver/310/node/thm
+END
+revision.h_template
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/heartmachine/!svn/ver/79/node/thm/revision.h_template
+END
+solenoid_patch.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/297/node/thm/solenoid_patch.h
+END
+flame_cpatch.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/heartmachine/!svn/ver/292/node/thm/flame_cpatch.c
+END
+simple_solenoid_cpatch.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/heartmachine/!svn/ver/296/node/thm/simple_solenoid_cpatch.c
+END
+pulse_patch.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/heartmachine/!svn/ver/309/node/thm/pulse_patch.c
+END
+flame_cpatch.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/heartmachine/!svn/ver/292/node/thm/flame_cpatch.h
+END
+simple_solenoid_cpatch.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/heartmachine/!svn/ver/296/node/thm/simple_solenoid_cpatch.h
+END
+pulse_patch.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/heartmachine/!svn/ver/61/node/thm/pulse_patch.h
+END
+tlc_config.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/heartmachine/!svn/ver/118/node/thm/tlc_config.h
+END
+mcp2515_bittime.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/62/node/thm/mcp2515_bittime.h
+END
+update_revision
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/heartmachine/!svn/ver/146/node/thm/update_revision
+END
+tlc_defines.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/heartmachine/!svn/ver/47/node/thm/tlc_defines.h
+END
+tlc_demo.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/47/node/thm/tlc_demo.c
+END
+patches.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/292/node/thm/patches.c
+END
+tlc_demo.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/47/node/thm/tlc_demo.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/heartmachine/!svn/ver/232/node/thm/Makefile
+END
+patches.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/291/node/thm/patches.h
+END
+delay.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/heartmachine/!svn/ver/47/node/thm/delay.c
+END
+qt_asm_tiny_mega.S
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/heartmachine/!svn/ver/47/node/thm/qt_asm_tiny_mega.S
+END
+delay.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/heartmachine/!svn/ver/224/node/thm/delay.h
+END
+Tlc5940.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/159/node/thm/Tlc5940.c
+END
+Tlc5940.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/159/node/thm/Tlc5940.h
+END
+serial_command.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/304/node/thm/serial_command.c
+END
+patch_id.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/heartmachine/!svn/ver/303/node/thm/patch_id.h
+END
+touch_api.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/heartmachine/!svn/ver/47/node/thm/touch_api.h
+END
+heartbeat_cpatch.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/heartmachine/!svn/ver/308/node/thm/heartbeat_cpatch.c
+END
+serial_command.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/146/node/thm/serial_command.h
+END
+attractor_patch.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/heartmachine/!svn/ver/240/node/thm/attractor_patch.c
+END
+heartbeat_cpatch.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/heartmachine/!svn/ver/291/node/thm/heartbeat_cpatch.h
+END
+sequence_patch.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/232/node/thm/sequence_patch.c
+END
+attractor_patch.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/heartmachine/!svn/ver/240/node/thm/attractor_patch.h
+END
+sequence_patch.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/155/node/thm/sequence_patch.h
+END
+thm_node.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/heartmachine/!svn/ver/290/node/thm/thm_node.c
+END
+can_command.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/heartmachine/!svn/ver/293/node/thm/can_command.c
+END
+serial_console.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/224/node/thm/serial_console.c
+END
+thm_node.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/heartmachine/!svn/ver/290/node/thm/thm_node.h
+END
+mcp2515_defs.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/heartmachine/!svn/ver/174/node/thm/mcp2515_defs.h
+END
+qtouch.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/heartmachine/!svn/ver/258/node/thm/qtouch.c
+END
+can_command.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/heartmachine/!svn/ver/284/node/thm/can_command.h
+END
+light_effects.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/heartmachine/!svn/ver/304/node/thm/light_effects.c
+END
+serial_console.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/257/node/thm/serial_console.h
+END
+qtouch.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/heartmachine/!svn/ver/258/node/thm/qtouch.h
+END
+patch_collection.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/heartmachine/!svn/ver/309/node/thm/patch_collection.c
+END
+light_effects.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/heartmachine/!svn/ver/304/node/thm/light_effects.h
+END
+patch_collection.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/heartmachine/!svn/ver/276/node/thm/patch_collection.h
+END
+sparkle_patch.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/heartmachine/!svn/ver/310/node/thm/sparkle_patch.c
+END
+defines.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/heartmachine/!svn/ver/47/node/thm/defines.h
+END
+sparkle_patch.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/heartmachine/!svn/ver/278/node/thm/sparkle_patch.h
+END
+spi.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/heartmachine/!svn/ver/224/node/thm/spi.c
+END
+mcp2515.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/232/node/thm/mcp2515.c
+END
+spi.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/heartmachine/!svn/ver/47/node/thm/spi.h
+END
+can.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/heartmachine/!svn/ver/224/node/thm/can.c
+END
+mcp2515.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/174/node/thm/mcp2515.h
+END
+utility.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/275/node/thm/utility.c
+END
+can.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/heartmachine/!svn/ver/197/node/thm/can.h
+END
+utility.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/245/node/thm/utility.h
+END
+uart.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/heartmachine/!svn/ver/47/node/thm/uart.c
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/heartmachine/!svn/ver/47/node/thm/README
+END
+sine_patch.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/heartmachine/!svn/ver/309/node/thm/sine_patch.c
+END
+uart.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/heartmachine/!svn/ver/47/node/thm/uart.h
+END
+touch_qt_config.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/61/node/thm/touch_qt_config.h
+END
+mstimer.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/279/node/thm/mstimer.c
+END
+sine_patch.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/heartmachine/!svn/ver/255/node/thm/sine_patch.h
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/heartmachine/!svn/ver/286/node/thm/main.c
+END
+mstimer.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/279/node/thm/mstimer.h
+END
+solenoid_patch.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/306/node/thm/solenoid_patch.c
+END

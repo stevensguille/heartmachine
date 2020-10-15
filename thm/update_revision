@@ -1,0 +1,8 @@
+#!/bin/bash
+revision_number=$(svn info | grep Revision | cut -f2 -d":")
+revision_template="revision.h_template"
+revision_output="revision.h"
+
+echo "Creating $revision_output with Revision Number $revision_number from $revision_template"
+sed "s/%%TO_BE_REPLACED%%/${revision_number}/g" ${revision_template} > ${revision_output}
+

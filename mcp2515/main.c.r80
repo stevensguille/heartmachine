@@ -1,0 +1,210 @@
+/******************************************************************************
+ * 
+ * Controller Area Network (CAN) Demo-Application
+ * Atmel AVR with Microchip MCP2515 
+ *
+ * Copyright (C) 2005 Martin THOMAS, Kaiserslautern, Germany
+ * <eversmith@heizung-thomas.de>
+ * http://www.siwawi.arubi.uni-kl.de/avr_projects
+ *
+ *****************************************************************************
+ *
+ * File    : main.c
+ * Version : 0.9
+ * 
+ * Summary : Application Entry
+ *           Test-Platform: Atmel ATmega + Microchip MCP2515
+ *           Here the MCP2515 is clocked by the AVR (see clock_init()).
+ *
+ * This application uses Peter Fleury's free AVR-U(S)ART library which
+ * has been slightly extended. See comments in uart.c.
+ *
+ *****************************************************************************/
+
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <avr/wdt.h>
+#include <avr/eeprom.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "uart.h"
+#include "spi.h"
+#include "can.h"
+#include "delay.h"
+#include "mcp2515.h"
+#include "mcp2515_defs.h"
+#include "mstimer.h"
+
+#define BAUD 57600
+
+static void initMSTimerISR( uint16_t ms_per_tick );
+
+FILE uart_str = FDEV_SETUP_STREAM(USART_Transmit, USART_Receive, _FDEV_SETUP_RW);
+
+static void dump_testMessage( CanMessage* msg ) {
+    uint8_t i;
+    printf("id: ");
+    if ( msg->extended_identifier == CAN_EXTID )
+        printf("%02x %02x ", 
+            (uint8_t)(msg->identifier >> 24),
+            (uint8_t)(msg->identifier >> 16));
+    
+    printf("%02x %02x ext_id: %s dlc: %u ",
+        (uint8_t)(msg->identifier >> 8),
+        (uint8_t)(msg->identifier),
+        (msg->extended_identifier == CAN_EXTID ? "ext" : "std"),
+        msg->dlc);
+
+    printf("%u ", (uint16_t)(msg->dta[0] << 8) | (uint16_t)(msg->dta[1]));
+
+    for( i=2; i < msg->dlc; i++ ) {
+        printf("%c ", msg->dta[i]);
+    }
+
+    printf("\r");
+}
+
+static void can_msgReceived(void)
+{
+	CanMessage msg;
+    uint8_t res;
+
+    res = can_readMessage( &msg );
+
+    switch( res ) {
+        case CAN_OK:
+            printf("rx: ");
+            dump_testMessage( &msg );
+            //printf("rtr: %02x filhit: %02x ", msg.rtr, msg.filhit);
+            PORTB ^= _BV(5);
+            break;
+        case CAN_NOMSG:
+            printf("No Message to receive\r");
+            break;
+        default:
+            printf("Unknown Result from can_readMessage()\r");
+    }
+}
+
+int main(void)
+{
+	uint8_t res;
+    uint8_t msg_avail_flag; // for what ?
+    uint8_t i;
+    uint16_t elapsed_ms;
+    mstimer_t loop_timer;
+
+    CanMessage test_msg;
+
+    can_initMessageStruct(&test_msg);
+    test_msg.identifier = CANDEFAULTIDENT;
+
+	USART_Init( USART_BAUD_SELECT( (BAUD), F_CPU ) );
+
+    stdout = stdin = &uart_str;
+
+    DDRB |= _BV(5);
+    PORTB |= _BV(5);
+
+	sei();
+	
+    // initialize the timer for 2000 ms
+    mstimer_init( &loop_timer, 2000 );
+
+	printf( "MCP2515 Test: Using mcp2515 library by Martin Thomas\r\r" );
+	
+    printf( "Initializing MS Timer\r" );
+    initMSTimerISR( 1 );
+
+    printf( "Initializing SPI " );
+	spi_init();		// init SPI-Interface (as "Master")
+    printf("- OK\r");
+	
+	printf( "Initializing CAN Interface " );
+	res = can_init( CAN_125KBPS );
+
+	if (res == CAN_OK)
+        printf( "- OK\r" );
+    else
+        printf( "- FAIL\r" );
+	
+	msg_avail_flag = 0;
+
+    // run in debug mode (This is set to run in loopback)
+    can_debug1();
+
+    srand(512);
+
+    // main loop	
+	for (;;) {
+        if ( ( can_checkReceive() == CAN_MSGAVAIL ) ) {
+            if (!msg_avail_flag) {
+                msg_avail_flag = 1;
+            }
+            can_msgReceived();
+        }
+        else {
+            msg_avail_flag = 0;
+        }
+
+        if ( mstimer_completed( &loop_timer ) ) {
+            // Send a new random message.
+            // Randomly select extended or standard id frame.
+            test_msg.extended_identifier = rand() % 2 ? CAN_EXTID : CAN_STDID; 
+            test_msg.identifier = rand();
+
+            // randomize payload length. First two data bytes will be the
+            // current elapsed millisecond count.
+            test_msg.dlc = rand() % (CAN_MAX_CHAR_IN_MESSAGE-2);
+
+            elapsed_ms = mstimer_elapsed( &loop_timer );
+            test_msg.dta[0] = (uint8_t)(elapsed_ms >> 8);
+            test_msg.dta[1] = (uint8_t)(elapsed_ms);
+                
+            for( i=2; i<test_msg.dlc; i++ )
+                test_msg.dta[i] = (rand() % 26) + 'a';
+
+            if ( can_sendMessage(&test_msg) == CAN_OK ) {
+                printf("tx: ");
+                dump_testMessage( &test_msg );
+            } else {
+                printf("Error Sending test_msg\r");
+                can_dumpStatus();
+            }
+
+            if ( can_checkError() != CAN_OK ) {
+                can_dumpStatus();
+            }
+            
+            mstimer_reset( &loop_timer );
+        }
+    }
+	
+	return 0;
+}
+
+static void initMSTimerISR( uint16_t ms_per_tick ) {
+    printf("Ticks per ms: %u\r", TICKS_PER_MS);
+    printf("Pre-scalar:   %u\r", CS_PRESCALER);
+    printf("ms per tick:  %u\r", ms_per_tick);
+
+    OCR1AH = ( ( TICKS_PER_MS / CS_PRESCALER * ms_per_tick ) >> 8 );
+    OCR1AL = ( TICKS_PER_MS / CS_PRESCALER * ms_per_tick );
+
+    // Enable the ISR for timer overflow
+    TIMSK1 |= _BV(OCIE1A);
+
+    // Set Timer pre_scaler  ( system clock / 1024 )
+    TCCR1B |= CS_PRESCALE_64;
+    //( 1 << CS12 ) | ( 1 << CS10 );
+
+    // Timer Mode CTC (count up to Compare, then reset) 
+    TCCR1B |= _BV(WGM12);
+}
+
+ISR(TIMER1_COMPA_vect) {
+    updateTick();
+}
+
+

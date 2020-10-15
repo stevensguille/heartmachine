@@ -1,0 +1,85 @@
+tlc5940 <koniho@gmail.com>
+
+A simple test of the tlc5940 interface for the node board for The Heart Machine
+project (http://URL?)
+
+There are number of modes that the demo can operate in. Modes can be modified
+via the serial console. The tlc5940 module is written by Alex Leone
+<acleone ~AT~ gmail.com> with a few modifications to the main file Tlc5940.cpp
+to un-c++ the interface.
+
+From the tlc5940 usage:
+
+tlc5940_test: usage:
+Commands take the form: CMD [VAL1] .... [VALN]
+All commands are terminated with a '\r' character where
+CMD is one of the following single characters:
+
+    m - Set mode of TLC behavior
+        s <mode>
+        Valid modes are:
+          p - pulsate (var: speed)
+          s - static
+          r - random
+          w - random walk (doesn't really work)
+          t - twinkle  (var: speed)
+
+    s - Set value of a specific TLC Channel
+        s <channel> <value>
+        Note: This will put the TLC in static mode.
+
+    t - Enable/Disable the TLC5940 Pseudo Chip Select
+        t <value>
+        0: disables chip select, otherwise enabled
+
+    f - Set the number format used to parse numerical command arguments
+        f <d|o|u|x>
+        d: signed decimal
+        o: octal
+        u: unsigned decimal
+        x: hexidecimal
+
+    k - Set the output mask. All outputs will be filtered through
+        this mask to determine if the channel should be on or not.
+        k <hex_mask>
+
+    e - Set rx echo
+        e <0|1>
+        0: disables local echo
+        1: enables local echo
+
+    t - Toggle the tlc5940 pseudo chip-select.
+
+Connections (taken from The Heart Machine board schematic):
+
+TLC-n-PIN   SIGNAL      CONNECTED-TO
+
+1           OUT1        LED1
+2           OUT2        LED2
+3           OUT3        LED3
+4           OUT4        LED4
+5           OUT5        LED5
+6           OUT6        LED6
+7           OUT7        LED7
+8           OUT8        LED8
+9           OUT9        LED9
+10          OUT10       LED10
+11          OUT11       LED11
+12          OUT12       LED12
+13          OUT13       LED13
+14          OUT14       LED14
+15          OUT15       LED15
+16          XERR        -
+17          SOUT        SIN (of TLC-(n+1))
+18          GSCLK       PORTD3 (as OC0B)
+19          DCPRG       V_cc
+20          IREF        22kOhm to GND (for each tlc5940)
+21          V_cc        +5V
+22          GND         GND
+23          BLANK       PORTB2 (as OC1B)
+24          XLAT        PORTB1 (as OC1A)
+25          SCLK        PORTB5 (as SCK)
+26          SIN         PORTB3 (as MOSI)
+27          VPRG        GND
+28          OUT0        LED0
+

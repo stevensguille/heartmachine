@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/heartmachine/!svn/ver/32/node/tlc5940
+END
+Tlc5940.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/heartmachine/!svn/ver/28/node/tlc5940/Tlc5940.c
+END
+tlc_shifts.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/heartmachine/!svn/ver/28/node/tlc5940/tlc_shifts.h
+END
+tlc_animations.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/heartmachine/!svn/ver/28/node/tlc5940/tlc_animations.h
+END
+Tlc5940.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/heartmachine/!svn/ver/28/node/tlc5940/Tlc5940.h
+END
+uart.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/28/node/tlc5940/uart.c
+END
+tlc_config.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/heartmachine/!svn/ver/28/node/tlc5940/tlc_config.h
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/28/node/tlc5940/README
+END
+mstimer.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/heartmachine/!svn/ver/28/node/tlc5940/mstimer.c
+END
+uart.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/28/node/tlc5940/uart.h
+END
+defines.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/heartmachine/!svn/ver/28/node/tlc5940/defines.h
+END
+tlc_defines.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/31/node/tlc5940/tlc_defines.h
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/heartmachine/!svn/ver/31/node/tlc5940/main.c
+END
+mstimer.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/heartmachine/!svn/ver/28/node/tlc5940/mstimer.h
+END
+tlc_demo.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/heartmachine/!svn/ver/32/node/tlc5940/tlc_demo.c
+END
+tlc_fades.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/heartmachine/!svn/ver/28/node/tlc5940/tlc_fades.h
+END
+thm_defines.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/28/node/tlc5940/thm_defines.h
+END
+tlc_demo.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/heartmachine/!svn/ver/32/node/tlc5940/tlc_demo.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/heartmachine/!svn/ver/31/node/tlc5940/Makefile
+END
+tlc_progmem_utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/heartmachine/!svn/ver/28/node/tlc5940/tlc_progmem_utils.h
+END

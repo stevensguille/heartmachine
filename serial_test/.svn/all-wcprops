@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/heartmachine/!svn/ver/29/node/serial_test
+END
+uart.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/heartmachine/!svn/ver/24/node/serial_test/uart.h
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/heartmachine/!svn/ver/24/node/serial_test/main.c
+END
+uart.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/heartmachine/!svn/ver/24/node/serial_test/uart.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/heartmachine/!svn/ver/24/node/serial_test/Makefile
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/heartmachine/!svn/ver/29/node/serial_test/README
+END

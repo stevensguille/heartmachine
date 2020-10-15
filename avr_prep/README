@@ -1,0 +1,10 @@
+avr_prep - AVR Preparation Scripts for The Heart Machine Project
+
+This directory contains a number of scripts to prepare an AVR for use on The
+Heart Machine node hardware.
+
+set_clkout - used to set the FUSE bits on an atmega328p to enable the CKOUT
+             signal which we use to drive the mcp2515 clock
+
+set_eeprom_id - used to write the node ID to the eeprom (when we have decided
+                on a spec!

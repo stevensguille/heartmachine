@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/heartmachine/!svn/ver/152/node/avr_prep
+END
+set_clkout
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/heartmachine/!svn/ver/152/node/avr_prep/set_clkout
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/heartmachine/!svn/ver/30/node/avr_prep/README
+END
+set_id_eeprom
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/heartmachine/!svn/ver/30/node/avr_prep/set_id_eeprom
+END

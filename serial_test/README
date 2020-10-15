@@ -1,0 +1,21 @@
+stream_test <koniho@gmail.com>
+
+A simple program to test the stdout/stdin mapping to USART Transmit and Receive
+functions. This test should be used to test the USART functionality of the 
+Heart Machine board.
+
+Mostly borrowed from avr-libc stdio example.
+
+Connections (taken from The Heart Machine board schematic):
+
+FTDI-HEADER     CONNECTED-TO
+
+1               GND 
+2               -
+3               Vcc
+4 (TXD)         PORTD1 (TXD)
+5 (RXD)         PORTD0 (RXD)
+6 (RESET)       PORTC6 (RESET)
+
+NOTE: Schematic has been changed since. Need to update
+

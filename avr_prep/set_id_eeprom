@@ -1,0 +1,29 @@
+#!/bin/bash
+AVRDUDE=/path/to/avrdude
+PORT=/path/to/tty.usbdev
+PROGRAMMER=arduino
+PART=m328p
+BAUD=57600
+
+print_usage() {
+    cat << EOF
+set_id_eeprom: usage: set_id_eeprom NODE_ID
+
+Note: We do not yet have a scheme for node ID's.
+EOF
+}
+
+if [[ $# -lt 1 ]]; then
+    echo "set_id_eeprom: you must specify the node ID"
+    print_usage
+    exit 1
+fi
+
+node_id=$1
+
+echo "Executing avrdude to set connected AVR to ID ${node_id}"
+echo "whhops .. not yet implemented!"
+print_usage
+exit 1
+
+$(AVRDUDE) -v  -p $(PART) -P $(PORT) -c $(PROGRAMMER) -b $(BAUD) -U lfuse:w:0xbf:m

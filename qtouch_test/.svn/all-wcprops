@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/heartmachine/!svn/ver/46/node/qtouch_test
+END
+mstimer.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/45/node/qtouch_test/mstimer.c
+END
+qt_asm_tiny_mega.S
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/heartmachine/!svn/ver/44/node/qtouch_test/qt_asm_tiny_mega.S
+END
+touch_api.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/heartmachine/!svn/ver/44/node/qtouch_test/touch_api.h
+END
+touch_qt_config.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/heartmachine/!svn/ver/44/node/qtouch_test/touch_qt_config.h
+END
+uart.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/heartmachine/!svn/ver/46/node/qtouch_test/uart.h
+END
+defines.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/45/node/qtouch_test/defines.h
+END
+Makefile.mine
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/heartmachine/!svn/ver/44/node/qtouch_test/Makefile.mine
+END
+qtouch.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/heartmachine/!svn/ver/46/node/qtouch_test/qtouch.c
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/heartmachine/!svn/ver/46/node/qtouch_test/main.c
+END
+mstimer.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/heartmachine/!svn/ver/44/node/qtouch_test/mstimer.h
+END
+qtouch.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/heartmachine/!svn/ver/46/node/qtouch_test/qtouch.h
+END
+uart.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/heartmachine/!svn/ver/46/node/qtouch_test/uart.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/heartmachine/!svn/ver/46/node/qtouch_test/Makefile
+END
