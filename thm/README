@@ -1,5 +1,7 @@
 thm - The Heart Machine Node Firmware
 
-The final integrated system with 
+The Heart Machine node.  Running on an AVR328 with 16 RGB diffused leds and 3 zones of capacitive touch input.
+
+Written by Reid Orsten, Alex Kon-i Ho and Max Stevens-Guille
 
  
